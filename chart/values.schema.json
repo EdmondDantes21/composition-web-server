@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "image": {
+      "type": "string",
+      "title": "Container Image",
+      "description": "The container image to use for the web server.",
+      "default": "nginx"
+    },
+    "tag": {
+      "type": "string",
+      "title": "Image Tag",
+      "description": "The tag of the container image.",
+      "default": "latest"
+    },
+    "replicas": {
+      "type": "integer",
+      "title": "Replicas",
+      "description": "The number of replicas for the web server.",
+      "default": 1
+    },
+    "port": {
+      "type": "integer",
+      "title": "Port",
+      "description": "The port to expose on the container.",
+      "default": 80
+    }
+  },
+  "required": [
+    "image",
+    "tag",
+    "replicas",
+    "port"
+  ]
+}
